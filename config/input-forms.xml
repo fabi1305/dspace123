@@ -160,6 +160,17 @@
          <hint>Seleccione el idioma del contenido principal del artículo. Si el idioma no aparece en la siguiente lista, por favor, seleccione "Otros". Si el contenido no tiene realmente un idioma (por ejemplo, si se trata de un conjunto de datos o una imagen), por favor seleccione 'N/A'.</hint>
          <required></required>
        </field>
+	   
+	   <field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>rights</dc-element>
+         <dc-qualifier></dc-qualifier>
+         <repeatable>false</repeatable>
+         <label>Derechos (dc.rights)</label>
+         <input-type value-pairs-name="common_rights">dropdown</input-type>
+         <hint>Seleccione openAccess para que sea cosechado publicamente.</hint>
+         <required></required>
+       </field>
      </page>
 
      <page number="2">
@@ -424,7 +435,16 @@
        <stored-value>other</stored-value>
      </pair>
    </value-pairs>
-
+   <value-pairs value-pairs-name="common_rights" dc-term="rights">
+     <pair>
+       <displayed-value>N/A</displayed-value>
+       <stored-value></stored-value>
+     </pair>
+     <pair>
+       <displayed-value>openAccess</displayed-value>
+       <stored-value>openAccess</stored-value>
+	 </pair>  
+   </value-pairs>
     </form-value-pairs>
 
 </input-forms>
